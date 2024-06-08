@@ -4,12 +4,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { MainComponent } from './content/main/main.component';
+import { ServicesComponent } from './content/services/services.component';
+import { AboutComponent } from './content/about/about.component';
+import { ContactComponent } from './content/contact/contact.component';
+import { LocalizationComponent } from './content/localization/localization.component';
+import { FooterComponent } from './footer/footer.component';
 
-const materials = {};
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+const materials = [MatSidenavModule];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
-  imports: [BrowserModule, NoopAnimationsModule],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    MainComponent,
+    ServicesComponent,
+    AboutComponent,
+    ContactComponent,
+    LocalizationComponent,
+    FooterComponent,
+  ],
+  imports: [BrowserModule, NoopAnimationsModule, ...materials],
   providers: [],
   bootstrap: [AppComponent],
 })

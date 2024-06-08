@@ -1,0 +1,13 @@
+.main {
+  height: 600px;
+  width: 100%;
+  background-image: url("../../../assets/photos/szefowa.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain;
+  }
+}
