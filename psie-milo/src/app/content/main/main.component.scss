@@ -1,14 +1,53 @@
 .main {
   min-height: 100vh;
   width: 100%;
-  background-image: url("../../../assets/photos/szefowa.jpeg");
+  background-image: url("../../../assets/photos-opti/nowofunland.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  z-index: 0;
+
+  .info-box {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: black;
+    z-index: 1;
+    font-size: larger;
+
+    .info-box-title {
+      font-size: large;
+      margin-bottom: 0.5rem;
+    }
+  }
 }
 
-@media (max-width: 768px) {
-  body {
-    background-size: contain;
+@media (max-width: 900px) {
+  .main {
+    .info-box {
+      margin-right: 1rem;
+      align-items: center;
+      .info-box-title {
+        font-size: large;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    top: 10%;
+    .info-box {
+      margin-right: 1rem;
+      align-items: center;
+      .info-box-title {
+        font-size: large;
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }

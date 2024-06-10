@@ -4,10 +4,12 @@
   background-color: #ffffff;
   position: fixed;
   top: 0;
+  z-index: 10;
 
   .logo-with-description {
     display: flex;
     align-items: center;
+    margin-left: 1rem;
 
     .title {
       font-size: larger;
@@ -24,5 +26,6 @@
   .links {
     display: flex;
     align-items: center;
+    margin-right: 1rem;
   }
 }
