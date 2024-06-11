@@ -7,11 +7,18 @@
     />
     <span class="title">PsieMiło</span>
   </div>
+  <div class="navigation">
+    <button mat-flat-button (click)="scrollTo('main')">Main</button>
+    <button mat-flat-button (click)="scrollTo('services')">Services</button>
+    <button mat-flat-button (click)="scrollTo('about')">About</button>
+    <button mat-flat-button (click)="scrollTo('contact')">Contact</button>
+    <button mat-flat-button (click)="scrollTo('localization')">
+      Localization
+    </button>
+  </div>
   <div class="links">
     <a
       aria-label="PsieMilo on Booksy"
-      target="_blank"
-      rel="noopener"
       href="https://booksy.com/pl-pl/242715_psiemilo-groomer-salon-pielegnacji-psow_zwierzaki_12773_czechowice-dziedzice#ba_s=seo"
       title="booksy"
     >
@@ -19,8 +26,6 @@
     </a>
     <a
       aria-label="PsieMilo on Instagram"
-      target="_blank"
-      rel="noopener"
       href="https://www.instagram.com/psiemilo/"
       title="Instagram"
     >
@@ -28,8 +33,6 @@
     </a>
     <a
       aria-label="PsieMilo on Facebook"
-      target="_blank"
-      rel="noopener"
       href="https://www.facebook.com/profile.php?id=61560062077534"
       title="Facebook"
     >
