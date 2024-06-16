@@ -5,12 +5,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  z-index: 1;
+  z-index: 0;
 
   .info-box {
     position: absolute;
-    top: calc(200vh + 20%);
-    left: 40%;
+    top: 20%;
+    left: 50%;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -21,6 +21,33 @@
     .info-box-title {
       font-size: large;
       margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    .info-box {
+      margin-right: 1rem;
+      align-items: center;
+      .info-box-title {
+        font-size: large;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    top: 10%;
+    .info-box {
+      margin-right: 1rem;
+      align-items: center;
+      .info-box-title {
+        font-size: large;
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }

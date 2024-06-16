@@ -1,4 +1,48 @@
-<div class="toolbar" role="banner">
+<div class="toolbar-desktop" role="banner">
+  <ng-container *ngTemplateOutlet="logo"></ng-container>
+
+  <div class="navigation">
+    <button mat-flat-button (click)="scrollTo('main')">O nas</button>
+    <button mat-flat-button (click)="scrollTo('services')">Usługi</button>
+    <button mat-flat-button (click)="scrollTo('about')">Kadra</button>
+    <button mat-flat-button (click)="scrollTo('contact')">Umów się</button>
+    <button mat-flat-button (click)="scrollTo('localization')">
+      Localizacja
+    </button>
+  </div>
+
+  <ng-container *ngTemplateOutlet="links"></ng-container>
+</div>
+
+<div class="toolbar-mobile">
+  <ng-container *ngTemplateOutlet="logo"></ng-container>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Mobile menu">
+    <mat-icon role="img" class="mat-icon">menu</mat-icon>
+  </button>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="scrollTo('main')">
+    <span>O nas</span>
+  </button>
+  <button mat-menu-item (click)="scrollTo('services')">
+    <span>Usługi</span>
+  </button>
+  <button mat-menu-item (click)="scrollTo('about')">
+    <span>Kadra</span>
+  </button>
+  <button mat-menu-item (click)="scrollTo('contact')">
+    <span>Umów się</span>
+  </button>
+  <button mat-menu-item (click)="scrollTo('localization')">
+    <span>Localizacja</span>
+  </button>
+  <button mat-menu-item class="links">
+    <ng-container *ngTemplateOutlet="links"></ng-container>
+  </button>
+</mat-menu>
+
+<ng-template #logo>
   <div class="logo-with-description">
     <img
       width="40"
@@ -7,15 +51,9 @@
     />
     <span class="title">PsieMiło</span>
   </div>
-  <div class="navigation">
-    <button mat-flat-button (click)="scrollTo('main')">Main</button>
-    <button mat-flat-button (click)="scrollTo('services')">Services</button>
-    <button mat-flat-button (click)="scrollTo('about')">About</button>
-    <button mat-flat-button (click)="scrollTo('contact')">Contact</button>
-    <button mat-flat-button (click)="scrollTo('localization')">
-      Localization
-    </button>
-  </div>
+</ng-template>
+
+<ng-template #links>
   <div class="links">
     <a
       aria-label="PsieMilo on Booksy"
@@ -39,4 +77,4 @@
       <img src="../assets/icons/facebook-logo.svg" alt="instagram-logo" />
     </a>
   </div>
-</div>
+</ng-template>
